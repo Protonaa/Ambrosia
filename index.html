@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ambrosia - A crypto coin inspired by Greek mythology. Join Athena and Hermes in exploring the stories of ancient Greece with a modern, mystic twist.">
+        <title>Ambrosia - Crypto Coin</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #121212;
+                color: #eaeaea;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            header {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: #1a1a1a;
+                padding: 20px 40px;
+                z-index: 10;
+            }
+            header nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap; /* Allow items to wrap onto a new line if needed */
+                margin-right: 5%;
+            }
+            header nav a {
+                color: #b383d3;
+                text-decoration: none;
+                font-size: 18px;
+                margin-left: 30px;
+            }
+            header nav a:hover {
+                color: #9c57d1;
+            }
+            section.hero {
+                height: 100vh;
+                background-image: url('placeholder-hero.jpeg'); /* Placeholder image */
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+            section.hero h1 {
+                font-size: 72px;
+                color: #fff;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                margin: 0;
+                display: block;
+            }
+            section.hero p {
+                font-size: 30px;
+                color: #fff;
+                margin-top: 10px;
+                display: block;
+            }
+            .break {
+                flex-basis: 100%;
+                height: 0;
+              }
+            .ai-agents {
+                background-color: #1d1d1d;
+                padding: 60px 20px;
+                text-align: center;
+            }
+            .ai-agents h2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 36px;
+                color: #b383d3;
+                margin-bottom: 20px;
+            }
+            .agents-content {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+            .agent-card {
+                background-color: #1f1f1f;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                text-align: center;
+                width: 250px;
+            }
+            .agent-card img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+            .agent-card h3 {
+                font-size: 24px;
+                color: #b383d3;
+                margin-top: 15px;
+            }
+            .agent-card p {
+                font-size: 16px;
+                color: #eaeaea;
+            }
+            section.lore {
+                background-color: #121212;
+                padding: 60px 20px;
+                text-align: center;
+            }
+            section.lore h2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 36px;
+                color: #b383d3;
+                margin-bottom: 20px;
+            }
+            section.lore p {
+                font-size: 18px;
+                color: #eaeaea;
+                margin-bottom: 30px;
+            }
+            .artwork-gallery {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .artwork-item {
+                width: 300px;
+                height: 300px;
+                
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                margin-bottom: 20px; /* Add some space between the text and the image */
+            }
+            
+            .artwork-item h4 {
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                margin: 0; /* Remove default margin */
+            }
+            
+            .artwork-image {
+                height: 250px; /* Adjust the image height */
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+            }
+            
+            .footer {
+                background-color: #1a1a1a;
+                color: #eaeaea;
+                text-align: center;
+                padding: 20px;
+            }
+            .footer p {
+                margin: 0;
+            }
+            .footer a {
+                color: #b383d3;
+                text-decoration: none;
+            }
+            .footer a:hover {
+                color: #9c57d1;
+                text-decoration: underline;
+            }
+            @media (max-width: 768px) {
+                header nav .nav-links {
+                    flex-direction: column; /* Stack nav links vertically on small screens */
+                    gap: 10px; /* Reduce gap between nav links */
+                }
+                section.hero h1 {
+                    font-size: 50px;
+                }
+                section.hero p {
+                    font-size: 16px;
+                }
+            }
+
+            header nav .logo {
+                display: flex;
+                align-items: center;
+                gap: 10px; /* Space between logo and text */
+            }
+            
+            header nav .logo img {
+                width: 60px; /* Adjust logo size */
+                height: auto;
+            }
+            
+            header nav .logo span {
+                font-size: 24px;
+                color: #b383d3;
+                font-weight: 600;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Ambrosia Logo">
+                    <span>Ambrosia</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#hero">Home</a>
+                    <a href="#ai-agents">AI Agents</a>
+                    <a href="#lore">Lore</a>
+                    
+                </div>
+            </nav>
+        </header>
+    
+        <section id="hero" class="hero">
+            <h1>Welcome to Ambrosia</h1><br>
+            <p>A crypto coin inspired by Greek mythology, where AI agents tell timeless stories of gods, myths, and legends.</p>
+            <p>CA: </p>
+        </section>
+    
+        <section id="ai-agents" class="ai-agents">
+            <h2>Meet the AI Agents</h2>
+            <div class="agents-content">
+                <div class="agent-card">
+                    <img src="athena-placeholder.jpg" alt="Athena">
+                    <h3>Athena</h3>
+                    <p>The goddess of wisdom and war, Athena is our intellectual guide through the world of Greek mythology. She weaves tales of strategy, bravery, and ancient knowledge.</p>
+                </div>
+                <div class="agent-card">
+                    <img src="hermes-placeholder.jpg" alt="Hermes">
+                    <h3>Hermes</h3>
+                    <p>The messenger god, Hermes brings a dynamic energy to the conversation. His stories are fast-paced, clever, and full of wit, offering a unique perspective on the myths.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="lore" class="lore">
+            <h2>The Lore Behind Ambrosia</h2>
+            <p>Ambrosia, the food of the gods, is the foundation of our cryptocurrency. Just as the gods of Olympus nourished their spirits with ambrosia, our coin is the fuel for a new era of digital exploration. Join us as we bridge the ancient and the modern through the wisdom of the gods and the power of blockchain.</p>
+        </section>
+    
+        <section id="artwork" class="artwork-gallery">
+            <div class="artwork-item">
+                <h4>Athena - Wisdom in the Digital Age</h4>
+                <div class="artwork-image" style="background-image: url('athena-artwork.jpeg');"></div>
+            </div>
+            <div class="artwork-item">
+                <h4>Hermes - The Messenger</h4>
+                <div class="artwork-image" style="background-image: url('hermes-artwork.jpeg');"></div>
+            </div>
+            <div class="artwork-item">
+                <h4>Mount Olympus - Home of the Gods</h4>
+                <div class="artwork-image" style="background-image: url('olympus-artwork.jpeg');"></div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <p>© 2024 Ambrosia. All rights reserved. <a href="#">Privacy Policy</a></p>
+        </footer>
+    </body>
+    
+</html>
